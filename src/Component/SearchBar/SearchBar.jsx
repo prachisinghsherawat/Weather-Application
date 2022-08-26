@@ -57,11 +57,11 @@ export const SearchBar = () => {
             <div>
                
                <h1>{cityData.name}</h1>
-               {/* <p>Humidity : {cityData?.main?.humidity}</p> */}
+               <p>Humidity : {cityData?.main?.humidity}</p>
                <p>Minimum Temprature : {cityData.main.temp_min}</p>
                <p>Maximum Temprature : {cityData.main.temp_max}</p>
                <p>Pressure : {cityData.main.pressure}</p>
-               {/* <p>Weather : {cityData.weather}</p> */}
+               <p>Weather : {cityData.weather}</p>
 
             </div>
         </>
