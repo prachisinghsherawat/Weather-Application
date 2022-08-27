@@ -2,10 +2,8 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
-import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import DirectionsIcon from '@mui/icons-material/Directions';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import axios from 'axios';
 import "./SearchBar.css" ;
@@ -18,6 +16,11 @@ export const SearchBar = () => {
     const [city , setCity ] = React.useState("")
     const [cityData , setCityData] = React.useState({})
 
+    React.useEffect(()=>{axios.get(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=4c349088db70ea47161d78028241c817&units=metric`)
+    .then((res)=>
+        setCityData(res.data)
+    )},[])
+
 
     const searchCity = () => {
 
@@ -26,7 +29,7 @@ export const SearchBar = () => {
             setCityData(res.data)
         )
     }
-    //console.log(cityData)
+    console.log(cityData)
 
 
 
@@ -49,23 +52,52 @@ export const SearchBar = () => {
                 onChange={(e)=> setCity(e.target.value)}
             />
 
-            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                <SearchIcon onClick={searchCity} />
+            <IconButton onClick={searchCity} type="button" sx={{ p: '10px' }} aria-label="search">
+                <SearchIcon />
             </IconButton>
 
             </Paper>
 
+            <div className="weekDay">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-            {/* <div>
-               
-               <h1>{cityData.name}</h1>
-               <p>Humidity : {cityData?.main?.humidity}</p>
-               <p>Minimum Temprature : {cityData.main.temp_min}</p>
-               <p>Maximum Temprature : {cityData.main.temp_max}</p>
-               <p>Pressure : {cityData.main.pressure}</p>
-               <p>Weather : {cityData.weather}</p>
+            
 
-            </div> */}
+            <div className="weatherToday">
+
+            {cityData.main &&
+
+                <div>
+
+                    <div className='leftData'>
+                        
+                        <h1>{cityData.name}</h1>
+                        <p> <b>Weather :</b> {cityData.weather[0].main}</p> 
+                        <p> <b>Minimum Temprature :</b>  {cityData.main.temp_min}</p>
+                        <p> <b>Maximum Temprature :</b>  {cityData.main.temp_max}</p>
+                        <p> <b>Pressure :</b> {cityData.main.pressure}</p>
+                        <p> <b>Humidity : </b>  {cityData.main.humidity}</p>
+                           
+                    </div>
+
+                    <div id='imgBox'>                      
+                        <img src={`https://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="icon" height="100%" width="100%"/>
+                    </div>
+
+                </div>
+
+            }
+
+            </div>
+
+            
         </>
     )
 }
