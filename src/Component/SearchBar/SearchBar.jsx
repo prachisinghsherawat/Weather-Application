@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import DirectionsIcon from '@mui/icons-material/Directions';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import axios from 'axios';
-
+import "./SearchBar.css" ;
 
 
 
@@ -22,9 +22,11 @@ export const SearchBar = () => {
     const searchCity = () => {
 
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=4c349088db70ea47161d78028241c817&units=metric`)
-        .then((res)=> setCityData(res.data))
+        .then((res)=>
+            setCityData(res.data)
+        )
     }
-    console.log(cityData)
+    //console.log(cityData)
 
 
 
