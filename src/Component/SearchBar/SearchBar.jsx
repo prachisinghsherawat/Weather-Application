@@ -80,8 +80,7 @@ export const SearchBar = () => {
 
                         <h1>{cityData.name}</h1>                     
 
-                        <div>
-                             
+                        <div>                            
                             <p> <b>Minimum Temprature</b> <br />   
                                 {cityData.main.temp_min}
                             </p>
@@ -91,9 +90,8 @@ export const SearchBar = () => {
                             </p>
                         </div>
 
-                        <div>
-                            
-                            <p> <b>Pressure</b> <br /> 
+                        <div>                           
+                           <p> <b>Pressure</b> <br /> 
                                 {cityData.main.pressure}
                             </p>
 
