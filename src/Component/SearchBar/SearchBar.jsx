@@ -33,7 +33,7 @@ export const SearchBar = () => {
     return(
       
         <>
-            <Paper
+            <Paper id='paper'        
                 component="form"
                 sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
             >
@@ -56,7 +56,7 @@ export const SearchBar = () => {
             </Paper>
 
 
-            <div>
+            {/* <div>
                
                <h1>{cityData.name}</h1>
                <p>Humidity : {cityData?.main?.humidity}</p>
@@ -65,7 +65,7 @@ export const SearchBar = () => {
                <p>Pressure : {cityData.main.pressure}</p>
                <p>Weather : {cityData.weather}</p>
 
-            </div>
+            </div> */}
         </>
     )
 }
