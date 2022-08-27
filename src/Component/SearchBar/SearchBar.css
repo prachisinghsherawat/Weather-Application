@@ -7,6 +7,7 @@
 }
 
 .weekDay{
+    padding: 1%;
     margin: auto;
     margin-top: 3%;
     width: 60%;
@@ -14,10 +15,11 @@
 }
 
 .weatherToday{
+    padding: 1%;
     margin: auto;
     margin-top: 3%;
     width: 60%;
-    border: 1px solid black;
+    border: 1px solid rgb(3, 3, 3);
 }
 
 .weatherToday>div{
@@ -27,16 +29,45 @@
 
 h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     font-family: monospace;
+    
+}
+
+h2{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    text-transform: uppercase;  
+    margin-top: -5%;
+    
+}
+
+.rightData{
+    width: 40%;
+    margin-top: 4%; 
 }
 
 #imgBox{
-    width: 35%;
-    background-color: rgb(214, 238, 250);
+    width: 80%;
+    height: 230px;
+    border-radius: 4%;
+    background-color: rgb(160, 196, 214);
 }
 
 .leftData{
     width: 60%;
-    border: 1px solid red;
 }
+
+.leftData>div{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leftData>div>p{
+    width: 40%;
+    padding: 2%;
+    border-radius: 4%;
+    background-color: rgb(238, 237, 203);
+}
+

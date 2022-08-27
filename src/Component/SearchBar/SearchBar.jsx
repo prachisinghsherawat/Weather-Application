@@ -77,18 +77,42 @@ export const SearchBar = () => {
                 <div>
 
                     <div className='leftData'>
-                        
+
                         <h1>{cityData.name}</h1>
-                        <p> <b>Weather :</b> {cityData.weather[0].main}</p> 
-                        <p> <b>Minimum Temprature :</b>  {cityData.main.temp_min}</p>
-                        <p> <b>Maximum Temprature :</b>  {cityData.main.temp_max}</p>
-                        <p> <b>Pressure :</b> {cityData.main.pressure}</p>
-                        <p> <b>Humidity : </b>  {cityData.main.humidity}</p>
+
+                        
+
+                        <div>
+                             
+                            <p> <b>Minimum Temprature</b> <br />   
+                                {cityData.main.temp_min}
+                            </p>
+
+                            <p> <b>Maximum Temprature</b>  <br /> 
+                                {cityData.main.temp_max}
+                            </p>
+                        </div>
+
+                        <div>
+                            
+                            <p> <b>Pressure</b> <br /> 
+                                {cityData.main.pressure}
+                            </p>
+
+                            <p> <b>Humidity</b> <br /> 
+                                {cityData.main.humidity}
+                            </p>
+                        </div>
+
+                       
                            
                     </div>
 
-                    <div id='imgBox'>                      
-                        <img src={`https://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="icon" height="100%" width="100%"/>
+                    <div className='rightData' > 
+
+                        <h2> {cityData.weather[0].main} </h2>                     
+                        <img id='imgBox' src={`https://openweathermap.org/img/w/${cityData.weather[0].icon}.png`} alt="icon" height="100%" width="100%"/>
+
                     </div>
 
                 </div>
