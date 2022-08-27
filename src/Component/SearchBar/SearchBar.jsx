@@ -78,9 +78,7 @@ export const SearchBar = () => {
 
                     <div className='leftData'>
 
-                        <h1>{cityData.name}</h1>
-
-                        
+                        <h1>{cityData.name}</h1>                     
 
                         <div>
                              
