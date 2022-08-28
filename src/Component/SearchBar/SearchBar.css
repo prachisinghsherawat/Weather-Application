@@ -3,28 +3,35 @@
 #paper{   
     margin: auto;
     margin-top: 3%;
-    width: 60%;
+    width: 70%;
 }
 
 .weekDay{
     padding: 1%;
     margin: auto;
     margin-top: 3%;
-    width: 60%;
-    border: 1px solid black;
+    width: 70%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.weekDay>div{
+    width: 13%;
+    border-radius: 4%;
+    background-color: rgb(187, 204, 212);
 }
 
 .weatherToday{
     padding: 1%;
     margin: auto;
     margin-top: 3%;
-    width: 60%;
-    border: 1px solid rgb(3, 3, 3);
+    width: 70%;
 }
 
 .weatherToday>div{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 h1{
@@ -49,7 +56,7 @@ h2{
 }
 
 #imgBox{
-    width: 80%;
+    width: 70%;
     height: 230px;
     border-radius: 4%;
     background-color: rgb(160, 196, 214);
