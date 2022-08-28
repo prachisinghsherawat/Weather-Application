@@ -16,15 +16,11 @@ export const SearchBar = () => {
 
     const [city , setCity ] = React.useState("")
     const [cityData , setCityData] = React.useState({})
-    const coordinate = React.useRef({lat : "" , lon: ""})
+
 
     React.useEffect(()=>{axios.get(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=4c349088db70ea47161d78028241c817&units=metric`)
     .then((res)=>
-
         setCityData(res.data) ,
-        // coordinate.current.lat = cityData.coord.lat ,
-        // coordinate.current.lon = cityData.coord.lon 
-
     )},[])
 
 
