@@ -9,6 +9,7 @@
 .weekDay{
     padding: 1%;
     margin: auto;
+    margin-top: 5%;
     margin-top: 3%;
     width: 70%;
     height: 220px;
@@ -19,7 +20,7 @@
 .weekDay>div{
     width: 13%;
     border-radius: 4%;
-    background-color: rgb(187, 204, 212);
+    background-color: rgb(236, 240, 241);
 }
 
 .weatherToday{

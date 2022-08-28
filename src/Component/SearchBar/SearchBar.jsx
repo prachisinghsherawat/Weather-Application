@@ -58,16 +58,6 @@ export const SearchBar = () => {
 
             </Paper>
 
-            <div className="weekDay">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
             
 
             <div className="weatherToday">
@@ -115,6 +105,18 @@ export const SearchBar = () => {
 
             }
 
+            </div>
+
+
+
+            <div className="weekDay">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
 
             

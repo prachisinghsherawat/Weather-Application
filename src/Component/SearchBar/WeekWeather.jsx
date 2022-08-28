@@ -1,0 +1,10 @@
+
+
+export const WeekWeather = () => {
+
+    return(
+        
+        <>
+        </>
+    )
+}
