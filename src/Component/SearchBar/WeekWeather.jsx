@@ -1,7 +1,22 @@
 
-//https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=4c349088db70ea47161d78028241c817
+//https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=
 
-export const WeekWeather = () => {
+import axios from "axios"
+import { useEffect } from "react"
+
+export const WeekWeather = ({cityData}) => {
+
+    //useEffect(()=>{getWeekData()},[])
+
+    const getWeekData = () => {
+
+        axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=${cityData.coord.lat}&lon=${cityData.coord.lon}&exclude={part}&appid=4c349088db70ea47161d78028241c817`)
+        .then(
+            (res)=> console.log(res) 
+        )
+    }
+
+    //console.log(cityData) 
 
     return(
 

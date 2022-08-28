@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import axios from 'axios';
 import "./SearchBar.css" ;
+import { WeekWeather } from './WeekWeather';
 
 
 
@@ -108,8 +109,9 @@ export const SearchBar = () => {
             </div>
 
 
+            <WeekWeather cityData={cityData} />
 
-            <div className="weekDay">
+            {/* <div className="weekDay">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -117,7 +119,7 @@ export const SearchBar = () => {
                 <div></div>
                 <div></div>
                 <div></div>
-            </div>
+            </div> */}
 
             
         </>
