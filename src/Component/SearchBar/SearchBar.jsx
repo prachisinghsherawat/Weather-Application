@@ -29,7 +29,7 @@ export const SearchBar = () => {
             setCityData(res.data)
         )
     }
-    console.log(cityData)
+    //console.log(cityData)
 
 
 
