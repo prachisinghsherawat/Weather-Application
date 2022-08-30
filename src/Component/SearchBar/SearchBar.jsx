@@ -15,13 +15,29 @@ export const SearchBar = () => {
 
 
     const [city , setCity ] = React.useState("")
+    const [lat , setLat ] = React.useState("")
+    const [lon , setLon ] = React.useState("")
     const [cityData , setCityData] = React.useState({})
+    
 
 
-    React.useEffect(()=>{axios.get(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=4c349088db70ea47161d78028241c817&units=metric`)
-    .then((res)=>
-        setCityData(res.data) ,
-    )},[])
+    React.useEffect(()=>{
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=delhi&appid=4c349088db70ea47161d78028241c817&units=metric`)
+    .then((res)=>{
+
+    console.log(res)
+
+
+    if(res.status ===  200){
+        setCityData(res.data)
+        setLat(res.data.coord.lat)
+        setLon(res.data.coord.lon) 
+    }
+        
+})},[])
+
+
+    console.log(lat,lon)
 
 
     const searchCity = () => {
@@ -110,7 +126,7 @@ export const SearchBar = () => {
             </div>
 
 
-            <WeekWeather data={cityData.coord} />
+            <WeekWeather lat={lat} lon={lon} />
 
             {/* <div className="weekDay">
                 <div></div>
